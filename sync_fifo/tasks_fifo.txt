@@ -1,0 +1,20 @@
+task cycles;
+    input integer n;
+    begin
+	    repeat(n) @(posedge clk);
+	end
+endtask
+
+task wr_en;
+    input en;
+	begin
+        @(posedge clk) wr = en;
+	end
+endtask
+
+task rd_en;
+    input en;
+	begin
+        @(posedge clk) rd = en;
+	end
+endtask
