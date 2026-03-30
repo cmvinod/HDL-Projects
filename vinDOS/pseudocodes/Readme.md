@@ -1,0 +1,1 @@
+This folder contains the pseudocodes for the intended architecture. The project is inspired from my learnings based on nand2tetris project and brunolevy's fpga resources. (Link will be updated later).
