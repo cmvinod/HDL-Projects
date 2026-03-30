@@ -1,0 +1,2 @@
+mod5_traditional.v
+mod5_tb.v +define+TRADITIONAL
