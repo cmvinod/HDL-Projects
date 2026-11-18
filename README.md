@@ -7,12 +7,12 @@ Small RTL design exercises in Verilog / SystemVerilog, built to practise digital
 
 | Folder | What it is | Status |
 |---|---|---|
-| [`Adder/`](Adder) | Ripple-carry adder built from full adders (`genvar`) | needs width fix, see README |
-| [`Comparator/`](Comparator) | Recursive N-bit comparator from 1-bit cells and muxes | simulates |
-| [`Counter-alternate/`](Counter-alternate) | Mod-5 counter two ways, plus counter variants | simulates; `updown.v` broken |
+| [`Adder/`](Adder) | Ripple-carry adder built from full adders (`genvar`) | verified |
+| [`Comparator/`](Comparator) | Recursive N-bit comparator from 1-bit cells and muxes | verified |
+| [`Counter-alternate/`](Counter-alternate) | Mod-5 counter two ways, plus counter variants | verified |
 | [`Digital_Clock/`](Digital_Clock) | 24-hour clock with a set-time FSM | testbench runs; not yet checked against a reference |
 | [`Multiplier/`](Multiplier) | 8-bit column-compression multiplier; N-bit shift-and-add | simulates, spot-checked |
-| [`Sorter/`](Sorter) | 2- to 5-input 8-bit sorters built hierarchically | dataflow path verified |
+| [`Sorter/`](Sorter) | 2- to 5-input 8-bit sorters built hierarchically | verified |
 | [`sync_fifo/`](sync_fifo) | 8-bit synchronous FIFO | being rewritten |
 | [`vinDOS/`](vinDOS) | Hack-style CPU building blocks (nand2tetris HDL) | chips written; RV32I core planned |
 
