@@ -4,8 +4,8 @@ add wave -noupdate /tb/DUT/clk
 add wave -noupdate /tb/DUT/rst
 add wave -noupdate /tb/DUT/wr
 add wave -noupdate /tb/DUT/rd
-add wave -noupdate /tb/DUT/rdptr
-add wave -noupdate /tb/DUT/wrptr
+add wave -noupdate -radix unsigned /tb/DUT/rdptr
+add wave -noupdate -radix unsigned /tb/DUT/wrptr
 add wave -noupdate /tb/DUT/state
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
@@ -24,4 +24,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {1145 ps} {2145 ps}
+WaveRestoreZoom {1785 ps} {2785 ps}

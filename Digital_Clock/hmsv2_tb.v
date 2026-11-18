@@ -17,21 +17,21 @@ always @* next_NBA     <= next;
 always @* inc_NBA      <= inc;
 always @* dec_NBA      <= dec;
 
-wire[4:0] ghanta;
-wire[5:0] nimush,kshan;
+wire[4:0] hrs;
+wire[5:0] min,sec;
 
-//             (clk,rst,stop_run,      inc,     dec,   next,  hrs,min,sec); 
+//             (clk,rst,stop_run,      inc,     dec,   next,  hrs,min,sec);
 //hmsv2 JAILER (clk,rst stop_run_NBA,next_NBA,inc_NBA,dec_NBA,hrs,min,sec); //port by order
 
 hmsv2 JAILER (//port by name
 //.DUT(TB)
-.min(nimush),
+.min(min),
 .rst(rst),
-.sec(kshan),
+.sec(sec),
 .inc(inc_NBA),
 .stop_run(stop_run_NBA),
 .dec(dec_NBA),
-.hrs(ghanta),
+.hrs(hrs),
 .next(next_NBA),
 .clk(clk)
 );

@@ -1,5 +1,5 @@
 module updown (clk,rst,cnt);
-input clk,rstl
+input clk,rst
 output [2:0] cnt;
 
 reg [2:0] cnt;
@@ -7,17 +7,17 @@ reg [2:0] cnt;
 `ifdef  PREVIOUS_CNT;
 reg [2:0] pcnt;
 
-always @(poseddge clk, posedge rst_
-vegin
-if (rst) pcnt <=1;
-else pct <=cnt;
-end
+always @(posedge clk, posedge rst)
+  begin
+  if (rst) pcnt <=1;
+  else pct <=cnt;
+  end
 
 always @(posedge clk, posedge rst)
 begin
  if(rst) cnt <= 0;
  else
- begin 
+ begin
  if(cnt ==7) cnt <=6;
  else
  beginif(cnt==0) cnt <=1;
@@ -29,7 +29,7 @@ begin
  end
  end
  `endif
- 
+
  `ifdef FSM
  parameter UP = 0;
  parameter DOWN = 1;
@@ -38,7 +38,7 @@ begin
  begin
  if(rst) state <= UP;
  else
- case(state)
+ case (state)
  UP : state <= cnt==6 ? DOWN :UP;
  DOWN : state <= cnt==1? UP : DOWN;
 end
@@ -46,7 +46,7 @@ end
 always @(posedge clk, posedge rst)
 begin
 if(rst) cnt <= 0;
-elseif(cnt==7) cnt <= 6;
+else if(cnt==7) cnt <= 6;
 else
 begin
 if(cnt==0) cnt <= 1;
@@ -68,15 +68,15 @@ end
  parameter F4=2;
  parameter S4=3;
  `endif
- 
+
  `ifdef SV
  enum {UP,DOWN,F4,S4} state;
  `endif
- 
+
  always @(posedge clk,posedge rst)
  begin
  if(rst) state <= UP;
- else 
+ else
  case (state)
  UP : state <= cnt ==7? SOWN : UP;
  DOWN : if (cnt==0) state <= UP;

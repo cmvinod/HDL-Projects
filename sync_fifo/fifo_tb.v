@@ -1,7 +1,7 @@
 module tb;
 
 reg clk=0; always begin #5 clk = !clk; end
-reg rst=1; initial begin #2 rst = 0; end 	
+reg rst=1; initial begin #2 rst = 0; end
 
 reg wr,rd;
 reg [7:0] din;
@@ -49,6 +49,6 @@ initial
 		cycles(20);
 		wr_en(1);
 		wr_en(0);
-        $finish;		
+        $finish;
 	end
 endmodule

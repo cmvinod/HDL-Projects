@@ -12,12 +12,12 @@ three_num_sorter u3 (Y2,Y3,Y4,out2_sort3num_u1,out3_sort3num_u1,out2_sort2num_u2
 //Y1>Y2>Y3>Y4
 /*
        SORT3NUM                   SORT2NUM
-	   ________                   ________                                                                                              
-      |        |                 |        |	  
-  A --| THREE  |-- OUT1      A --|  TWO   |-- OUT1                                                                                       
-  B --|  NUM   |-- OUT2          |  NUM   |                                                                                       
-  C --| SORTER |-- OUT3      B --| SORTER |-- OUT2                                                                                          
-      |________|                 |________|                                                                                      
-                                                                                                                           
+	     ________                   ________
+      |        |                 |        |
+  A --| THREE  |-- OUT1      A --|  TWO   |-- OUT1
+  B --|  NUM   |-- OUT2          |  NUM   |
+  C --| SORTER |-- OUT3      B --| SORTER |-- OUT2
+      |________|                 |________|
+
 */
 endmodule
